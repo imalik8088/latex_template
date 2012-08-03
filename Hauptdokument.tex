@@ -1,0 +1,84 @@
+\documentclass{report}
+
+% PREAMBLE:
+\title{Hello World}
+\author{Vorname Nachname}
+\date{January 1, 2012}
+
+\usepackage[margin=2cm]{geometry}
+\linespread {1.25}\selectfont %1.25 da er von Haus aus 1.2 ist und 1,25 * 1,2 = 1,5 isch
+
+\usepackage{booktabs}
+\usepackage[ngerman]{babel}
+\usepackage[applemac]{inputenc} % Umlaute unter Mac werden automatisch gesetzt
+
+
+% CONTENT:
+\begin{document}
+	\maketitle 	% schreibt den preamble Inhalt auf die pdf Seite
+	
+	\begin{abstract}
+		Die Zeiten, da man unter der Seele eine immaterielle, einfache,
+unzerstörbare Substanz hinter dem Bewußtsein und dessen Modifikationen
+verstand, scheinen nun doch vorüber zu sein.Die Zeiten, da man unter der Seele eine immaterielle, einfache,
+unzerstörbare Substanz hinter dem Bewußtsein und dessen Modifikationen
+verstand, scheinen nun doch vorüber zu sein.
+	\end{abstract}
+	
+\chapter{Beispiele} % (fold)
+\label{cha:beispiele}
+	Dieses Kapitel soll viele alltägliche Beispiele abdecken um einen {\LaTeX} Dokument zu setzen
+
+		\section{Schriftarten} % (fold)
+		\label{sec:schriftarten}
+			Beispiel 
+			\begin{itemize}
+				\item Kursiv: \emph{Das ist ein Beispiel}
+				\item Unterstreichen: \underline{Das ist ein Beispiel}
+				\item Fettschrift: \textbf{Das ist ein Beispiel}
+				\item Kombination aus dreien: \underline{\textbf{\emph{Das ist ein Beispiel}}}
+				\item Serifen: \textsf{Das ist ein Beispiel}
+				\item Schreibmaschinen Schrift: \texttt{Das ist ein Beispiel}
+				\item Kleine Großbuchstaßen: \textsc{Das ist ein Beispiel}
+			\end{itemize}
+			
+			
+		
+			\subsection{Symbole} % (fold)
+			\label{sub:symbole}
+				Deutsche Umlaute: "A, "O, "U, "a, "o, "u, "s
+			% subsection symbole (end)
+		% section schriftarten (end)
+% chapter beispiele (end)
+	
+	\section{Methods} % (fold)
+	\label{sec:methods}
+			Die Zeiten, da man unter der Seele eine immaterielle, einfache,
+unzerstörbare Substanz hinter dem Bewußtsein und dessen Modifikationen
+verstand, scheinen nun doch vorüber zu sein. 
+			\subsection{Procedure} % (fold)
+			\label{sub:procedure}
+				Die Zeiten, da man unter der Seele eine immaterielle, einfache,
+unzerstörbare Substanz hinter dem Bewußtsein.
+			% subsection Procedure (end)
+			
+			\subsection{Function} % (fold)
+			\label{sub:function}
+				Die Zeiten, da man unter der Seele eine immaterielle, einfache,
+unzerstörbare Substanz hinter dem Bewußtsein.
+				\subsubsection{Anonyme Funktionen} % (fold)
+				\label{ssub:anonyme_funktionen}
+				Die Zeiten, da man unter der Seele eine immaterielle \newline
+				% subsubsection anonyme_funktionen (end)
+			% subsection function (end)
+	% section methods (end)
+	
+	
+	\begin{tabular}{lllll} \toprule
+	Organismen Name & Substratfreie Kontrolle  & \multicolumn{2}{c}{Probenansatz} \\\cmidrule(rl){3-4}
+	 & Farbe & Farbe & Bewertung \\\midrule
+	Alpha1 & farblos &  dunkel braun & +++ \\m
+	MaT2 & farblos & farblos & - \\\bottomrule 
+	 \end{tabular}
+	
+\end{document}
