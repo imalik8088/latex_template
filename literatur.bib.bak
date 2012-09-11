@@ -1,0 +1,20 @@
+% This file was created with JabRef 2.8.1.
+% Encoding: MacRoman
+
+@ARTICLE{Lin1973,
+  author = {Shen Lin and Brian W. Kernighan},
+  title = {An Effective Heuristic Algorithm for the Travelling-Salesman Problem},
+  journal = {Operations Research},
+  year = {1973},
+  volume = {21},
+  pages = {498--516}
+}
+
+@MISC{wiki:xxx,
+  author = {Wikipedia},
+  title = {Nick Clegg --- Wikipedia{,} Die freie Enzyklopadie},
+  year = {2012},
+  note = {[Online; Stand 11. September 2012]},
+  url = {\url{http://de.wikipedia.org/w/index.php?title=Nick_Clegg&oldid=105731841}}
+}
+

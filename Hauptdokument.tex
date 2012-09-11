@@ -8,25 +8,36 @@
      /Keywords   (Stichwort1,Stichwort2)      
 } 
 
+\title{MyTitle}
+\author{theAuthor}
+\date{1.1.2000}
+
+
+
 %----------------- PAKETE INKLUDIEREN ----------------- %
 
-
-\usepackage{geometry} % Packet f웦 Seitenrandabst둵dex und Einstellung f웦 Seitenr둵der
+\usepackage{geometry} % Packet f체r Seitenrandabst채ndex und Einstellung f체r Seitenr채nder
 \usepackage[ngerman]{babel} % deutsche Silbentrennung
 
 \usepackage{booktabs} %entzerrt die Tabellenzeilen und bietet verschieden dicke Unterteilungslinien
-\usepackage{longtable} % Tabellen k쉗nen sich nicht 웑er mehrere Seiten 
+\usepackage{longtable} % Tabellen k철nnen sich nicht 체ber mehrere Seiten 
 \usepackage{graphicx} % kann LaTeX Grafiken einbinden
 
 \usepackage[applemac]{inputenc} % Umlaute unter Mac werden automatisch gesetzt
 \usepackage[T1]{fontenc} % Zeichenencoding
-\usepackage{lmodern} % typographische Qualit둻 
-\frenchspacing % Schaltet den zus둻zlichen Zwischenraum ab
+\usepackage{lmodern} % typographische Qualit채t 
+\frenchspacing % Schaltet den zus채tzlichen Zwischenraum ab
 \usepackage{fix-cm}
-\usepackage{hyperref} % verwandelt alle Kapitel웑erschriften, Verweise aufs Literaturverzeichnis und andere Querverweise in PDF-Hyperlinks
+\usepackage{hyperref} % verwandelt alle Kapitel체berschriften, Verweise aufs Literaturverzeichnis und andere Querverweise in PDF-Hyperlinks
 \usepackage{color}
+\usepackage{url}
 
-% f웦 Listings
+
+\usepackage[nottoc]{tocbibind}
+
+
+
+% f체r Listings
 \usepackage{listings}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, stepnumber=4, keywordstyle=\color{black}\bfseries\itshape, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
 \lstset{language=java}
@@ -42,12 +53,17 @@
 
 
 
+
 %-------##-------##-------##------- ANFANG INHALT -------##-------##-------##-------%
 \begin{document}
+
+
+
 \pagenumbering{roman} % Seitennummer
 
 %----------------- DECKBLATT -----------------%
  \include{Deckblatt/h_da_arbeit}
+ 
 %----------------- ABSTRACT -----------------%
  \include{Abstract/Abstract}
  
@@ -61,7 +77,7 @@
 
 % ----- Tabellen----- %
 % \addcontentsline{toc}{section}{Tabellenverzeichnis}  % falls in Inhalsverzeichnis
-% \fancyhead[L]{Abbildungsverzeichnis / Abk웦zungsverzeichnis} %Kopfzeile links
+% \fancyhead[L]{Abbildungsverzeichnis / Abk체rzungsverzeichnis} %Kopfzeile links
 \listoftables
 
 % ----- Listings ----- %
@@ -73,7 +89,8 @@
 
 \pagestyle{plain} % zurueck setzen von roemische seitenanzahl
 
-%----------------- KAPITEL : EINF낷RUNG  ----------------- %
+
+%----------------- KAPITEL : EINF횥HRUNG  ----------------- %
 \include{Kapitel/Einfuehrung}
 
 %----------------- KAPITEL : GRUNDLAGEN  ----------------- %	
@@ -84,7 +101,7 @@
 %----------------- KAPITEL : BEISPIELE  ----------------- %	
 \chapter{Beispiele}
 \label{cha:beispiele}
-	Dieses Kapitel soll viele allt둮liche Beispiele\footnote{Fu쬷ote} abdecken um einen {\LaTeX} Dokument zu setzen
+	Dieses Kapitel soll viele alltaegliche Beispiele\footnote{Fussnote} abdecken um einen {\LaTeX} Dokument zu setzen
 
 		\section{Schriftarten}
 		\label{sec:schriftarten} 
@@ -96,8 +113,8 @@
 					\item Kombination aus dreien: \underline{\textbf{\emph{Das ist ein Beispiel}}}						\end{itemize} 
 				\item Serifen: \textsf{Das ist ein Beispiel}
 				\item Schreibmaschinen Schrift: \texttt{Das ist ein Beispiel}
-				\item Kleine Gro쬫uchsta쬮n: \textsc{Das ist ein Beispiel}
-				\item Ausf웘rungszeichen: ``Das ist ein Beispiel''
+				\item Kleine Grossbuchstassen: \textsc{Das ist ein Beispiel}
+				\item Ausfuehrungszeichen: ``Das ist ein Beispiel''
 				\item asld
 			\end{itemize}
 			
@@ -111,7 +128,7 @@
 
 	\section{Abbildungen}
 		Wie folgt bindet man Abbildungen ein:
-		% Beispiel f웦 Bildintegration
+		% Beispiel f체r Bildintegration
 		\begin{figure}[htb]
 		 \centering
 		 \includegraphics[width=0.4\textwidth,angle=0]{abb/beispiel}
@@ -152,7 +169,7 @@
 
 
 	\section{Verweise}
-		Hier werden Verweise auf verschiedene Elemente erstellt
+		Hier werden Verweise auf verschiedene Elemente erstellt \cite{lin1973}
 		\subsection{Pageref und Ref} 
 			Diese Textstelle ist sehr interessant.\label{interessant} \\				
 			Hier wird auf die Textstelle~\ref{interessant} verwiesen, \\
@@ -173,7 +190,11 @@ public class HelloWorld {
 }
 		\end{lstlisting} 
 		
-
+	
+\nocite{wiki:xxx}
+\bibliographystyle{amsalpha}
+\bibliography{literatur}
+\pagenumbering{Roman}	
 	
 
 	
